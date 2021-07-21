@@ -5,6 +5,7 @@ The Cook County Department of Public Health (CCDPH) is a local health department
 * compare infectious disease rates in our county through a health equity lens
 * examine school vaccination trends and find and interpret their school’s vaccination rates
 * track local flu and West Nile virus seasons as they happen
+* access COVID-19 surveillance data
 
 This is a Shiny app itself that has links and descriptions of each of the other Shiny apps we have developed.
 
