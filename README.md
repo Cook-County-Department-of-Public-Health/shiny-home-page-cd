@@ -9,5 +9,3 @@ The Cook County Department of Public Health (CCDPH) is a local health department
 This is a Shiny app itself that has links and descriptions of each of the other Shiny apps we have developed.
 
 The home page is live [here](https://ccdphcd.shinyapps.io/home/). 
-
-Questions and comments on this project can be directed to [hannah.steinberg@cookcountyhhs.org](mailto:hannah.steinberg@cookcountyhhs.org).
