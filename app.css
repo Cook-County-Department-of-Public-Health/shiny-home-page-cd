@@ -112,22 +112,38 @@ p {
   margin:auto;
 }
 
-#vaccines {
+/*#vaccines {
           display:block;
           height: 200px;
           width: 200px;
           border-radius: 50%;
           border: 3px solid #6EC99A;
           background-color: #BAFFDA;
+}*/
+#vaccines {
+          display:block;
+          height: 200px;
+          width: 200px;
+          border-radius: 50%;
+          border: 3px solid #c99a6e;
+          background-color: 	#ffdbba;
 }
 
-#flu {
+/*#flu {
           display:block;
           height: 200px;
           width: 200px;
           border-radius: 50%;
           border: 3px solid #D3BC54;
           background-color: #F7E69B;
+}*/
+#flu {
+          display:block;
+          height: 200px;
+          width: 200px;
+          border-radius: 50%;
+          border: 3px solid #6EC99A;
+          background-color: #BAFFDA;
 }
 
 #cd {
@@ -157,12 +173,45 @@ p {
           background-color: #AFE0FF;
 }
 
+#covid {
+          display:block;
+          height: 200px;
+          width: 200px;
+          border-radius: 50%;
+          border: 3px solid #685877;
+          background-color: #BAA3D1;
+}
 
+/*#overdoses {
+          display:block;
+          height: 200px;
+          width: 200px;
+          border-radius: 50%;
+          border: 3px solid #c99a6e;
+          background-color: 	#ffdbba;
+}*/
+#overdoses {
+          display:block;
+          height: 200px;
+          width: 200px;
+          border-radius: 50%;
+          border: 3px solid #D3BC54;
+          background-color: #F7E69B;
+}
+
+.fa-hospital {color:#0C331D;font-size: 75px;padding-bottom: 50px;padding-top: 50px}
 .fa-chart-line {color:#0C331D;font-size: 75px;padding-bottom: 50px;padding-top: 50px}
-.fa-heartbeat{color:#0C331D;font-size: 75px;padding-bottom: 50px;padding-top: 50px}
 .fa-users{color:#0C331D;font-size: 75px;padding-bottom: 50px;padding-top: 50px}
-.fa-syringe{color:#33280C;font-size: 75px;padding-bottom: 50px;padding-top: 50px}
+/*.fa-syringe{color:#33280C;font-size: 75px;padding-bottom: 50px;padding-top: 50px}*/
+.fa-syringe{color:#0C2F33;font-size: 75px;padding-bottom: 50px;padding-top: 50px}
+.fa-chart-bar{color:#33280C;font-size: 75px;padding-bottom: 50px;padding-top: 50px}
 .fa-crow{color:#330C13;font-size: 75px;padding-bottom: 50px;padding-top: 50px}
+/*.fa-school{color:#0C2F33;font-size: 75px;padding-bottom: 50px;padding-top: 50px}*/
+.fa-school{color:#33280C;font-size: 75px;padding-bottom: 50px;padding-top: 50px}
+
+/*
+.fa-chart-line{color:#0C1933;font-size: 75px;padding-bottom: 50px;padding-top: 50px}
+.fa-heartbeat{color:#0C331D;font-size: 75px;padding-bottom: 50px;padding-top: 50px}
 .fa-dove{color:#330C13;font-size: 75px;padding-bottom: 50px;padding-top: 50px}
 .fa-thermometer-full{color:#330C13;font-size: 75px;padding-bottom: 50px;padding-top: 50px}
 .fa-hiking{color:#330C13;font-size: 75px;padding-bottom: 50px;padding-top: 50px}
@@ -170,5 +219,4 @@ p {
 .fa-umbrella-beach{color:#330C13;font-size: 75px;padding-bottom: 50px;padding-top: 50px}
 .fa-thermometer-three-quarters{color:#330C13;font-size: 75px;padding-bottom: 50px;padding-top: 50px}
 .fa-sun{color:#330C13;font-size: 75px;padding-bottom: 50px;padding-top: 50px}
-.fa-school{color:#0C2F33;font-size: 75px;padding-bottom: 50px;padding-top: 50px}
-.fa-chart-line{color:#0C1933;font-size: 75px;padding-bottom: 50px;padding-top: 50px}
+*/

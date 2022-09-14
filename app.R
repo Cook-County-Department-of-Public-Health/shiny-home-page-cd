@@ -1,9 +1,10 @@
 library(shiny)
-flu_link = "https://ccdphcd.shinyapps.io/weekly_influenza_surveillance_beta/"
+flu_link = "https://ccdphcd.shinyapps.io/influenza/"
 equity_link = "https://ccdphcd.shinyapps.io/healthequity/"
 wnv_link = "https://ccdphcd.shinyapps.io/westnile/"
 vaccines_link = "https://ccdphcd.shinyapps.io/schoolvaccines/"
 cd_link = "https://ccdphcd.shinyapps.io/cd-surveillance/"
+opioid_link = " https://ccdphcd.shinyapps.io/opioid-overdose/"
 
 ui <- fluidPage(
   #Bring in extra CSS to style application
@@ -34,11 +35,12 @@ ui <- fluidPage(
   fluidRow(
     column(
       width = 12,
-      HTML('<p style = "padding-bottom:20px;padding-top:20px;padding-left:60px;padding-right:60px;text-align: center; background:#EAF5FF;border: 3px solid #D5E2EF;font-size: 15px;font-weight:500;font-size:16px">In an effort to make accessing heath data more flexible and user-friendly, the Cook County Department of Public Health Communicable Disease Unit has created a series of interactive data visualization applications (apps). 
-        Explore the links below to learn more about local health indicators in suburban Cook County!</p>')
+      HTML('<p style = "padding-bottom:20px;padding-top:20px;padding-left:60px;padding-right:60px;text-align: center; background:#EAF5FF;border: 3px solid #D5E2EF;font-size: 15px;font-weight:500;font-size:16px">In an effort to make accessing heath data more flexible and user-friendly, the Cook County Department of Public Health has created a series of interactive data visualization applications on topics of special interest. 
+        Explore the links below for a deep dive into local health indicators in suburban Cook County.</p>')
       )
   ),
   br(),
+  
   
   #Surveillance App
   fluidRow(
@@ -52,6 +54,7 @@ ui <- fluidPage(
     )
   ),br(), hr(),
   
+  
   #Equity App
   fluidRow(
     column( #button
@@ -63,6 +66,49 @@ ui <- fluidPage(
       p("Suburban Cook County has some of the most affluent, as well as some of the most disadvantaged, municipalities in the country. We see these disparities manifested in various health outcomes in our cities, villages, and towns. Cook County Department of Public Health has made addressing health equity one of its top priorities in its Community Health Assessment and Improvement Plan, WePlan2020. With this app, we allow for the visualization of select infectious disease rates in suburban Cook County and their correlations with various social indicators related to income, education, insurance status, place of birth, race, and ethnicity.")
     )
   ),br(), hr(),
+  
+  
+  #Covid App
+  fluidRow(
+    column( #button
+      width = 2, offset = 0, align = "center",  actionButton("covid", "", icon = icon("hospital"),  onclick ="window.open('https://ccdphcd.shinyapps.io/covid19/', '_blank')")
+    ),
+    column( #description
+      width = 8, offset = 0, 
+      a(h3("COVID-19 Surveillance"), href = cd_link, target="_blank"),
+      p("This app displays surveillance data for confirmed cases of COVID-19, as well as estimates of COVID-19 vaccination coverage, for suburban Cook County.")
+    )
+  ),br(), hr(),
+  
+  
+  #Flu App
+  fluidRow(
+    column( #button
+      width = 2, offset = 0,  align = "center", actionButton("flu", "", icon = icon("syringe"), onclick ="window.open('https://ccdphcd.shinyapps.io/weekly_influenza_surveillance_beta/', '_blank')")
+    ),
+    column( #description
+      width = 8, offset = 0, 
+      a(h3("Influenza Surveillance"), href = flu_link, target="_blank"),
+      p("The Cook County Department of Public Health collects and analyzes data on local influenza activity year-round. During periods when higher influenza activity is expected (from early October through mid-May), this information is compiled into a weekly surveillance report that is distributed to our partners in the healthcare community, schools, community groups, and the public. This application is a companion to our weekly surveillance report.")
+    )
+  ), br(), hr(),
+ 
+  
+  #Opioid App
+  fluidRow(
+    column( #button
+      width = 2, offset = 0, align = "center",  actionButton("overdoses", "", icon = icon("chart-bar"),  onclick ="window.open('https://ccdphcd.shinyapps.io/schoolvaccines/', '_blank')")
+    ),
+    column( #description
+      width = 8, offset = 0, 
+      a(h3("Opioid-Involved Overdoses"), href = opioid_link, target="_blank"),
+      p("The CCDPH Opioid-Involved Overdose app presents opioid-involved mortality for users to better understand the effects of the opioid epidemic within Suburban Cook County. The app uses mortality data from the Office of the ", 
+        a("Medical Examiner of Cook County.", href = "https://datacatalog.cookcountyil.gov/Public-Safety/Medical-Examiner-Case-Archive/cjeq-bs86", target="_blank"), 
+        " For more information on how you can help prevent opioid-involved overdose death, please visit the ", 
+        a("CCDPH Opioid page.", href = "https://cookcountypublichealth.org/behavioral-health/opioids/", target="_blank"))
+    )
+  ),br(), hr(),
+  
   
   #Vaccines App
   fluidRow(
@@ -79,17 +125,6 @@ ui <- fluidPage(
     )
   ),br(), hr(),
   
-  #Flu App
-  fluidRow(
-    column( #button
-      width = 2, offset = 0,  align = "center", actionButton("flu", "", icon = icon("syringe"), onclick ="window.open('https://ccdphcd.shinyapps.io/weekly_influenza_surveillance_beta/', '_blank')")
-  ),
-    column( #description
-      width = 8, offset = 0, 
-           a(h3("Weekly Influenza Surveillance"), href = flu_link, target="_blank"),
-           p("The Cook County Department of Public Health collects and analyzes data on local influenza activity year-round. During periods when higher influenza activity is expected (from early October through mid-May), this information is compiled into a weekly surveillance report that is distributed to our partners in the healthcare community, schools, community groups, and the public. This application is a companion to our weekly surveillance report.")
-           )
-  ), br(), hr(),
   
   #WNV App
   fluidRow(
@@ -98,7 +133,7 @@ ui <- fluidPage(
     ),
     column( #descriptoin
       width = 8, offset = 0, 
-      a(h3("Weekly West Nile Virus Surveillance"), href = wnv_link, target="_blank"),
+      a(h3("West Nile Virus Surveillance"), href = wnv_link, target="_blank"),
       p("During periods when increased West Nile virus activity is expected (generally from June through October), 
         suburban Cook County's four mosquito abatement districts (MADs)- the North Shore MAD, the Northwest MAD,
         the Desplaines Valley MAD, and the South Cook County MAD- and the Cook County Department of Public Health 
