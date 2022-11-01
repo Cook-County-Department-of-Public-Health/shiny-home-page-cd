@@ -5,6 +5,7 @@ wnv_link = "https://ccdphcd.shinyapps.io/westnile/"
 vaccines_link = "https://ccdphcd.shinyapps.io/schoolvaccines/"
 cd_link = "https://ccdphcd.shinyapps.io/cd-surveillance/"
 opioid_link = " https://ccdphcd.shinyapps.io/opioid-overdose/"
+covid_link = " https://ccdphcd.shinyapps.io/covid19/"
 
 ui <- fluidPage(
   #Bring in extra CSS to style application
@@ -75,7 +76,7 @@ ui <- fluidPage(
     ),
     column( #description
       width = 8, offset = 0, 
-      a(h3("COVID-19 Surveillance"), href = cd_link, target="_blank"),
+      a(h3("COVID-19 Surveillance"), href = covid_link, target="_blank"),
       p("This app displays surveillance data for confirmed cases of COVID-19, as well as estimates of COVID-19 vaccination coverage, for suburban Cook County.")
     )
   ),br(), hr(),
