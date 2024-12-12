@@ -112,15 +112,8 @@ p {
   margin:auto;
 }
 
-/*#vaccines {
-          display:block;
-          height: 200px;
-          width: 200px;
-          border-radius: 50%;
-          border: 3px solid #6EC99A;
-          background-color: #BAFFDA;
-}*/
-#vaccines {
+
+#cd {
           display:block;
           height: 200px;
           width: 200px;
@@ -129,15 +122,8 @@ p {
           background-color: 	#ffdbba;
 }
 
-/*#flu {
-          display:block;
-          height: 200px;
-          width: 200px;
-          border-radius: 50%;
-          border: 3px solid #D3BC54;
-          background-color: #F7E69B;
-}*/
-#flu {
+
+#overdoses {
           display:block;
           height: 200px;
           width: 200px;
@@ -146,7 +132,7 @@ p {
           background-color: #BAFFDA;
 }
 
-#cd {
+#respiratory {
           display:block;
           height: 200px;
           width: 200px;
@@ -182,15 +168,8 @@ p {
           background-color: #BAA3D1;
 }
 
-/*#overdoses {
-          display:block;
-          height: 200px;
-          width: 200px;
-          border-radius: 50%;
-          border: 3px solid #c99a6e;
-          background-color: 	#ffdbba;
-}*/
-#overdoses {
+
+#vaccines {
           display:block;
           height: 200px;
           width: 200px;
